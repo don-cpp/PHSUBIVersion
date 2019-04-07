@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PH SUBI Version</string>
+    <string name="app_name">SUBI</string>
     <string name="button">Button</string>
     <string name="About_text">This version of SUBI is made by: Pro-Hackers</string>
     <string name="this_is_a_test">This is a test</string>
@@ -15,4 +15,10 @@
     <string name="host_a_game">Host a game!</string>
     <string name="find_a_game">Find a game!</string>
     <string name="log_out">Log out</string>
+    <string name="finish_sign_up">Finish Sign Up</string>
+    <string name="don_t_have_an_account_2">Don\'t have an account?</string>
+    <string name="welcome_to_subi">Welcome To SUBI</string>
+    <string-array name="sports">
+        <item>"Soccer</item>
+    </string-array>
 </resources>
