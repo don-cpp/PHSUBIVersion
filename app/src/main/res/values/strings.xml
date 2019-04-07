@@ -3,5 +3,9 @@
     <string name="button">Button</string>
     <string name="About_text">This version of SUBI is made by: Pro-Hackers</string>
     <string name="this_is_a_test">This is a test</string>
-    <string name="title_activity_host_game">HostGame</string>
+    <string name="password">password</string>
+    <string name="username">username</string>
+    <string name="todo">TODO</string>
+    <string name="sign_up">Sign up!</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 </resources>
