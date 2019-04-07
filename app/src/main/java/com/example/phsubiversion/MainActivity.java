@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //SWITCHING TO MAP_ACTIVITY CHANGE BY SHAH RUKH
         Intent intent = new Intent(this, Map_Activity.class);
         startActivity(intent);
+
     }
 
 
