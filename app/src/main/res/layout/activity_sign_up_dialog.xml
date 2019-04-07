@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SignUpDialog">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -37,9 +37,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
+            android:autofillHints=""
             android:hint="@string/username"
             android:inputType="textEmailAddress"
-            android:autofillHints="" tools:targetApi="o" />
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/password"
@@ -51,8 +52,15 @@
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif"
             android:hint="@string/password"
-            android:inputType="textPassword" tools:targetApi="o"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            tools:targetApi="o" />
+
+        <Button
+            android:id="@+id/FinishSignUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish Sign Up" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
