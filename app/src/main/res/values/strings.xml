@@ -11,4 +11,8 @@
     <string name="title_activity_host_game">title_activity_host_game</string>
     <string name="confirm_password">Confirm password</string>
     <string name="sign_up_2">Sign up</string>
+    <string name="log_in">Log in!</string>
+    <string name="host_a_game">Host a game!</string>
+    <string name="find_a_game">Find a game!</string>
+    <string name="log_out">Log out</string>
 </resources>
