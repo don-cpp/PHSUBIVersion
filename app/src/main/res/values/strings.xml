@@ -15,4 +15,12 @@
     <string name="host_a_game">Host a game!</string>
     <string name="find_a_game">Find a game!</string>
     <string name="log_out">Log out</string>
+    <string-array name="sports">
+        <item>"Soccer"</item>
+        <item>"Football"</item>
+        <item>"Baseball"</item>
+        <item>"Golf"</item>
+        <item>"Tennis"</item>
+        <item>"Basketball"</item>
+    </string-array>
 </resources>
