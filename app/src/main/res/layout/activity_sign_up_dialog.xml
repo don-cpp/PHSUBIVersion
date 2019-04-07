@@ -60,7 +60,7 @@
             android:id="@+id/FinishSignUpButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish Sign Up" />
+            android:text="@string/finish_sign_up" />
             android:importantForAutofill="no"
             android:inputType="textPassword"
             tools:targetApi="o" />

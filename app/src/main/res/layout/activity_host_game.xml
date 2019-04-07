@@ -15,7 +15,6 @@
         android:layout_marginLeft="27dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
-        android:entries="@array/sports"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
