@@ -29,8 +29,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-
-
     public void validUser (String userName, String password)
     {
         DatabaseReference ref = database.getReference("Persons");
