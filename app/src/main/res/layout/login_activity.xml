@@ -13,8 +13,9 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/todo"
         android:scaleType="fitXY"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteY="109dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic[14]" />
 
     <android.support.design.widget.TextInputLayout
