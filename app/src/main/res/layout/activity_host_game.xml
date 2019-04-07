@@ -1,24 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HostGame">
 
+    <Spinner
+        android:id="@+id/SportSelection"
+        android:layout_width="357dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:entries="@array/sports"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:layout_width="453dp"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_marginBottom="11dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginRight="230dp"
+        android:layout_marginBottom="11dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/SportSelection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:text="Select Your Sport:" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="355dp"
+        android:layout_height="269dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:text="Location Placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SportSelection" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
+        android:hint="Date and Time of Event"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="58dp"
+        android:ems="10"
+        android:hint="Number of People Needed"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginBottom="65dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginLeft="181dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="65dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+</android.support.constraint.ConstraintLayout>
