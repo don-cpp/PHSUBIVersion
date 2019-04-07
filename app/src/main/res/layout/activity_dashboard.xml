@@ -20,6 +20,7 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/host_a_game"
         android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,12 +38,15 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="268dp"
         android:text="@string/find_a_game"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/LogOutButton"
