@@ -11,6 +11,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -47,7 +48,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    @SuppressLint("MissingPermission")
+    //@SuppressLint("MissingPermission")
     @Override
     public void onMapReady(GoogleMap map) {
 
@@ -65,8 +66,16 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         map.setOnInfoWindowClickListener((GoogleMap.OnInfoWindowClickListener) this);
-        //map.setMyLocationEnabled(true);
-        map.setMyLocationEnabled(true);
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            map.setMyLocationEnabled(true);
+        } else {
+            Toast.makeText(Map_Activity.this, "You have to accept to enjoy all app's services!", Toast.LENGTH_LONG).show();
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                map.setMyLocationEnabled(true);
+            }}
         map.getUiSettings().setMyLocationButtonEnabled(true);
         map.getUiSettings().setMapToolbarEnabled(true);
 
@@ -91,7 +100,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                     Toast.makeText(Map_Activity.this,geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAddressLine(0) +" "+ geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getLocality() +" "+geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAdminArea(),Toast.LENGTH_LONG).show();
-                    markerOptions.title(latLng.latitude + " : " + latLng.longitude+ geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAddressLine(0) +" "+ geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getLocality() +" "+geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAdminArea());
+                    markerOptions.title(geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAddressLine(0) +"\n"+ geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getLocality() +"\n"+geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).get(0).getAdminArea());
                     finalMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
                     finalMap.addMarker(markerOptions);
                 } catch (IOException e) {
@@ -123,7 +132,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
             try {
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(myString[0], myString[1]))
-                        .title(myString[0].toString() + " : " + myString[1].toString()+ geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getAddressLine(0) +" "+ geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getLocality() +" "+geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getAdminArea()));
+                        .title(geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getAddressLine(0) +"\n"+ geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getLocality() +"\n"+geocoder.getFromLocation(myString[0], myString[1], 1).get(0).getAdminArea()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
