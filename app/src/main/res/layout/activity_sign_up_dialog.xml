@@ -30,19 +30,20 @@
             android:src="@color/colorPrimaryDark" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/usernameS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
+            android:autofillHints=""
             android:hint="@string/username"
             android:inputType="textEmailAddress"
-            android:autofillHints="" tools:targetApi="o" />
+            tools:targetApi="o" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/passwordS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -51,8 +52,9 @@
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif"
             android:hint="@string/password"
-            android:inputType="textPassword" tools:targetApi="o"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            tools:targetApi="o" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
