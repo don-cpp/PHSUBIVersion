@@ -11,9 +11,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Login extends AppCompatActivity {
 
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -60,8 +57,7 @@ public class Login extends AppCompatActivity {
     public void CreateUser(String userName, String password)
     {
         DatabaseReference ref = database.getReference("Persons");
-        Map<String, Persons> user = new HashMap<>();
-        user.put(userName, new Persons());
-        ref.setValue(user);
+        Persons user = new Persons(userName, password);
+        ref.child(userName).setValue(user);
     }
 }

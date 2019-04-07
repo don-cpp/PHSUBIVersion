@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
 
 android {
     compileSdkVersion 28
@@ -17,7 +19,7 @@ android {
         }
     }
 }
-ext{
+ext {
     playServicesVersion = '12.6.85' // update accordingly
 }
 
@@ -36,8 +38,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
-    implementation'com.google.android.gms:play-services-location:11.0.1'//for location
+    implementation 'com.google.android.gms:play-services-location:11.0.1'//for location
     implementation 'com.google.android.gms:play-services-places:11.0.1'//for places
+    implementation 'com.google.android.gms:play-services-analytics:16.0.0'
     implementation 'com.google.android.gms:play-services-tasks:16.0.1'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

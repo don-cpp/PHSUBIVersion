@@ -18,6 +18,12 @@ public class HostGame extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        writeNewUser("address3", "7", "soccer", "3:00 am");
+    }
 
+    private void writeNewUser(String address, String ownerID, String sport, String time) {
+        Games game = new Games(address, ownerID, sport, time);
+
+        mDatabase.child("Games").child(ownerID + sport).setValue(game);
     }
 }

@@ -21,11 +21,6 @@ public class FindGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_game);
-        GetGameInfo();
-    }
-
-    public void GetGameInfo()
-    {
         DatabaseReference ref = database.getReference("Games");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
