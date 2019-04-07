@@ -10,6 +10,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class HostGame extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
