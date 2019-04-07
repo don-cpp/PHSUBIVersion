@@ -1,10 +1,12 @@
 package com.example.phsubiversion;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,6 +18,8 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
 
+    Button SUDialog;
+
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
     private String uN = "123";
     private String pw = "123";
@@ -24,11 +28,19 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
+        SUDialog = (Button) findViewById(R.id.sign_up_button);
+
+        SUDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),SignUpDialog.class);
+                startActivity(intent);
+            }
+        });
+
         validUser(uN, pw);
 
     }
-
-
 
 
     public void validUser (String userName, String password)
@@ -66,4 +78,6 @@ public class Login extends AppCompatActivity {
         user.put(userName, new Persons());
         ref.setValue(user);
     }
+
+
 }
