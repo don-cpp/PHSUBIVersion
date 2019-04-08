@@ -42,9 +42,9 @@
         <!--Maps-->
 
         <activity android:name=".FindGame"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
         />
-        <activity android:name=".Map_Activity"/>
+
         <activity android:name=".Dashboard"
                     android:theme="@style/AppTheme.NoActionBar"/>
         />

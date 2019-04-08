@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         Button button= (Button) findViewById(R.id.sign_up_button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Login.this,FindGame.class));
+                startActivity(new Intent(Login.this, SignUpDialog.class));
             }
         });
 
