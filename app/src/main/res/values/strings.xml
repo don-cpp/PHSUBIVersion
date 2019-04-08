@@ -12,8 +12,8 @@
     <string name="confirm_password">Confirm password</string>
     <string name="sign_up_2">Sign up</string>
     <string name="log_in">Log in!</string>
-    <string name="host_a_game">Host a game!</string>
-    <string name="find_a_game">Find a game!</string>
+    <string name="host_a_game">Host a game</string>
+    <string name="find_a_game">Find a game</string>
     <string name="log_out">Log out</string>
     <string name="finish_sign_up">Finish Sign Up</string>
     <string name="don_t_have_an_account_2">Don\'t have an account?</string>
