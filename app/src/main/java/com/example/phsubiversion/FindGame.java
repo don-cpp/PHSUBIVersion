@@ -43,6 +43,8 @@ public class FindGame extends AppCompatActivity implements OnMapReadyCallback, G
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_find_game);
 
+        setContentView(R.layout.activity_find_game);
+        DatabaseReference ref = database.getReference("Games");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -66,7 +68,7 @@ public class FindGame extends AppCompatActivity implements OnMapReadyCallback, G
         mapFragment.getMapAsync(this);
 
     }
-    
+
 
     @SuppressLint("MissingPermission")
     @Override

@@ -9,4 +9,23 @@
     <string name="sign_up">Sign up!</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="title_activity_host_game">title_activity_host_game</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up_2">Sign up</string>
+    <string name="log_in">Log in!</string>
+    <string name="host_a_game">Host a game</string>
+    <string name="find_a_game">Find a game</string>
+    <string name="log_out">Log out</string>
+    <string name="finish_sign_up">Finish Sign Up</string>
+    <string name="don_t_have_an_account_2">Don\'t have an account?</string>
+    <string name="welcome_to_subi">Welcome To SUBI</string>
+=======
+    <string-array name="sports">
+        <item>"Soccer"</item>
+        <item>"Football"</item>
+        <item>"Baseball"</item>
+        <item>"Golf"</item>
+        <item>"Tennis"</item>
+        <item>"Basketball"</item>
+>>>>>>> eb2f417a29d6b834925bcdd1ff4c8d4f3e82beba
+    </string-array>
 </resources>
