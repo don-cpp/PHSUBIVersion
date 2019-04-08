@@ -1,13 +1,14 @@
 package com.example.phsubiversion;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -40,6 +41,11 @@ public class HostGame extends AppCompatActivity {
                 DatabaseReference ref = database.getReference("Games");
                 Games game = new Games(address.getText().toString(), strUN, sport.getSelectedItem().toString(), time.getText().toString());
                 ref.child(strUN).setValue(game);
+                Context context = getApplicationContext();
+                CharSequence text = "Game Saved!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
             }
         });
         address = findViewById(R.id.etHostAddress);
