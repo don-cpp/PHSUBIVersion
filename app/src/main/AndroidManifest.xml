@@ -34,20 +34,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FindGame"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Dashboard"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <!--Maps Android Key-->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDPeYclVbUuPOCleghlPBeKEFDiTXeCKyw"/>
+
+        <!--Maps-->
+
+        <activity android:name=".FindGame"
+            android:theme="@style/AppTheme.NoActionBar"
+        />
+
+        <activity android:name=".Dashboard"
+                    android:theme="@style/AppTheme.NoActionBar"/>
+        />
         <activity
             android:name=".HostGame"
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="true"/>
             android:label="@string/title_activity_host_game"
             android:theme="@style/AppTheme.NoActionBar" />
-
     </application>
 
     <uses-feature
