@@ -12,10 +12,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Dashboard extends AppCompatActivity {
 
     Button FindGame, HostGame;
+    private String strUN;
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        strUN = getIntent().getStringExtra("username");
         setContentView(R.layout.activity_dashboard);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         FindGame = findViewById(R.id.FindGameButton);
@@ -24,6 +26,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),HostGame.class);
+                intent.putExtra("username", strUN);
                 startActivity(intent);
             }
         });

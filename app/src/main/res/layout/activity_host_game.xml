@@ -16,6 +16,7 @@
         android:layout_marginLeft="27dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
+        android:entries="@array/sports"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,23 +59,8 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         tools:text="Select Your Sport:" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="355dp"
-        android:layout_height="269dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:text="Location Placeholder"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SportSelection" />
-
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/etHostTime"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -83,17 +69,18 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="28dp"
         android:hint="Date and Time of Event"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/etHostPeople"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/hostTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etHostPeople"
         android:layout_width="393dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -104,12 +91,12 @@
         android:ems="10"
         android:hint="Number of People Needed"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintBottom_toTopOf="@+id/backHost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/backHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
@@ -120,7 +107,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/confirmHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="181dp"
@@ -132,7 +119,19 @@
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back_button"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toEndOf="@+id/backHost"
+        app:layout_constraintTop_toBottomOf="@+id/etHostPeople" />
+
+    <EditText
+        android:id="@+id/etHostAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Full Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="173dp" />
 
 </android.support.constraint.ConstraintLayout>

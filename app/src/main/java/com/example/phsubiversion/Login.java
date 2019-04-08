@@ -23,8 +23,6 @@ public class Login extends AppCompatActivity {
     DataSnapshot db;
 
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private String uN = "123";
-    private String pw = "123";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +67,7 @@ public class Login extends AppCompatActivity {
         if(user.child("password").getValue().toString().equals(password))
         {
             Intent intent = new Intent(getApplicationContext(),Dashboard.class);
+            intent.putExtra("username", userName);
             startActivity(intent);
         }
         else
