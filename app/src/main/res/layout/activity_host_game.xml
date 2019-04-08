@@ -41,27 +41,31 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/etHostTime"
         android:layout_width="395dp"
-        android:layout_height="53dp"
+        android:layout_height="65dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="279dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:hint="Date and Time of Event"
         app:layout_constraintBottom_toTopOf="@+id/etHostPeople"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHostAddress">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/hostTime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="53dp"
+            android:layout_margin="@dimen/fab_margin" />
     </android.support.design.widget.TextInputLayout>
 
     <EditText
         android:id="@+id/etHostPeople"
         android:layout_width="393dp"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
+        android:layout_margin="@dimen/fab_margin"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="8dp"
@@ -78,9 +82,9 @@
         android:id="@+id/backHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="44dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -98,8 +102,10 @@
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/backHost"
-        app:layout_constraintTop_toBottomOf="@+id/etHostPeople" />
+        app:layout_constraintTop_toBottomOf="@+id/etHostPeople"
+        app:layout_constraintVertical_bias="0.666" />
 
     <EditText
         android:id="@+id/etHostAddress"
