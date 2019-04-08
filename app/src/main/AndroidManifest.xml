@@ -22,6 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignUpDialog"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
         <activity
