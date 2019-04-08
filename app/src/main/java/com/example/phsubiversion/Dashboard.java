@@ -11,7 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Dashboard extends AppCompatActivity {
 
-    Button FindGame, HostGame;
+    Button FindGame, HostGame, Logout;
     private String strUN;
     private DatabaseReference mDatabase;
     @Override
@@ -20,6 +20,7 @@ public class Dashboard extends AppCompatActivity {
         strUN = getIntent().getStringExtra("username");
         setContentView(R.layout.activity_dashboard);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        Logout = findViewById(R.id.LogOutButton);
         FindGame = findViewById(R.id.FindGameButton);
         HostGame = findViewById(R.id.HostGameButton);
         HostGame.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +35,13 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),FindGame.class);
+                startActivity(intent);
+            }
+        });
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
                 startActivity(intent);
             }
         });
