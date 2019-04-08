@@ -1,8 +1,11 @@
 package com.example.phsubiversion;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +28,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login_activity);
 
         validUser(uN, pw);
+        Button button= (Button) findViewById(R.id.sign_up_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this,FindGame.class));
+            }
+        });
 
     }
 

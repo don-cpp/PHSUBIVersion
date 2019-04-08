@@ -62,6 +62,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
                     == PackageManager.PERMISSION_GRANTED) {
                 map.setMyLocationEnabled(true);
             }}
+        map.setMyLocationEnabled(true);
         map.getUiSettings().setMyLocationButtonEnabled(true);
         map.getUiSettings().setMapToolbarEnabled(true);
 
@@ -74,6 +75,8 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         final GoogleMap finalMap = map;
+        finalMap.setMyLocationEnabled(true);
+        finalMap.getUiSettings().setMyLocationButtonEnabled(true);
         map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
