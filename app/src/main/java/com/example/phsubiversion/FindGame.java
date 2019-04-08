@@ -174,7 +174,7 @@ public class FindGame extends AppCompatActivity implements OnMapReadyCallback, G
                     bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.soccer);
                 }
                 else if (myString.split("\n")[1].toLowerCase().contains("basketball")) {
-                    bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.Basketball);
+                    bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.basketball);
                 }
                 else if (myString.split("\n")[1].toLowerCase().contains("baseball")) {
                     bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.baseball);
