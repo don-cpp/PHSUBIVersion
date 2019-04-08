@@ -22,6 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignUpDialog"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
         <activity
@@ -33,14 +34,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FindGame"
+        <!--Maps Android Key-->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDPeYclVbUuPOCleghlPBeKEFDiTXeCKyw"/>
+
+        <!--Maps-->
+
+        <activity android:name=".FindGame"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Dashboard"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+        />
+
+        <activity android:name=".Dashboard"
+            android:exported="true"
+                    android:theme="@style/AppTheme.NoActionBar"/>
+        />
         <activity
             android:name=".HostGame"
             android:theme="@style/AppTheme.NoActionBar"

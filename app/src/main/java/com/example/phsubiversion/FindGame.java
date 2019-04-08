@@ -42,7 +42,6 @@ public class FindGame extends AppCompatActivity implements OnMapReadyCallback, G
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_find_game);
-
         setContentView(R.layout.activity_find_game);
         DatabaseReference ref = database.getReference("Games");
         ref.addValueEventListener(new ValueEventListener() {
