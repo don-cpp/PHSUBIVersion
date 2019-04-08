@@ -24,7 +24,6 @@ public class HostGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         strUN = getIntent().getStringExtra("username");
         setContentView(R.layout.activity_host_game);
-        Toolbar toolbar = findViewById(R.id.toolbar);
         sport = findViewById(R.id.SportSelection);
         hostBack = findViewById(R.id.backHost);
         hostBack.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +44,6 @@ public class HostGame extends AppCompatActivity {
         });
         address = findViewById(R.id.etHostAddress);
         time = findViewById(R.id.hostTime);
-        setSupportActionBar(toolbar);
+
     }
 }
