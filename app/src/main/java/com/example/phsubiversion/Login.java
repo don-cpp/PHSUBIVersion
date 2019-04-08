@@ -64,8 +64,16 @@ public class Login extends AppCompatActivity {
     public void validUser (String userName, String password)
     {
         DataSnapshot user = db.child(userName);
-        boolean check = user.child("password").exists();
-        if(user.child("password").getValue().toString().equals(password) && check)
+        boolean check = password.isEmpty();
+        if (check)
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "Empty field. Please try again.";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else if(user.child("password").getValue().toString().equals(password))
         {
             Intent intent = new Intent(getApplicationContext(),Dashboard.class);
             intent.putExtra("username", userName);
